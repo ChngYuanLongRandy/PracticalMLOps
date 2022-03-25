@@ -1,17 +1,19 @@
-employee_pool = [{
-    'id':1,
-    'name':'Randy',
-    'rank':'Boss',
-    'pay':'Millions of Dollars',
-    'active':True
-},
-{
-    'id':2,
-    'name':'Wan Mun',
-    'rank':'Miss Boss',
-    'pay':'Millions as well',
-    'active':False
-}]
+employee_pool = [
+#     {
+#     'id':1,
+#     'name':'Randy',
+#     'rank':'Boss',
+#     'pay':'Millions of Dollars',
+#     'is_active':True
+# },
+# {
+#     'id':2,
+#     'name':'Wan Mun',
+#     'rank':'Miss Boss',
+#     'pay':'Millions as well',
+#     'is_active':False
+# }
+]
 
 def get_id():
     """
@@ -29,7 +31,7 @@ class Employee():
         self.name = name
         self.rank = rank
         self.pay = pay
-        self.active = True
+        self.is_active = True
 
     @property
     def data(self):
@@ -38,5 +40,5 @@ class Employee():
             'name': self.name,
             'rank': self.rank,
             'pay': self.pay,
-            'active':self.active
+            'is_active':self.is_active
         }

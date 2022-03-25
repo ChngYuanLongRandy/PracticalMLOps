@@ -7,14 +7,15 @@ class EmployeesResource(Resource):
     def get(self):
         employee_pool_display = []
         for emp in employee_pool:
-            if emp.active == True:
-                employee_pool_display.append(emp)
+            if emp.is_active is True:
+                employee_pool_display.append(emp.data)
 
-        return employee_pool_display, HTTPStatus.OK
+        return {'data':employee_pool_display}, HTTPStatus.OK
+
     def post(self):
         data = request.get_json()
         employee = Employee(
-            name = data['data'],
+            name = data['name'],
             rank = data['rank'],
             pay=data['pay']
         )
@@ -49,7 +50,7 @@ class ActivityEmployeeResource(Resource):
         if not employee:
             return {'message':'employee not found'}, HTTPStatus.NOT_FOUND
         
-        employee.active = True
+        employee.is_active = True
 
         return {} , HTTPStatus.OK
 
@@ -59,6 +60,10 @@ class ActivityEmployeeResource(Resource):
         if not employee:
             return {'message':'employee not found'}, HTTPStatus.NOT_FOUND
         
-        employee.active = False
+        employee.is_active = False
 
         return {} , HTTPStatus.OK
+
+class HealthResource(Resource):
+    def get(self):
+        return {'message':'health OK'}, HTTPStatus.OK
