@@ -7,4 +7,3 @@ test:
 lint:
 	isort
 	black
-	
