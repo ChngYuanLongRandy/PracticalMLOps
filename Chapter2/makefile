@@ -2,8 +2,8 @@ build:
 	python3 -m pip install -r requirements.txt
 
 test:
-	pytest 
+	python3 -m pytest 
 
 lint:
 	isort
-	python3 -m black
+	python3 -m black *.py
