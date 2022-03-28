@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 from flask import request
 from flask_restful import Resource
-from models.employees import Employee, employee_pool
+from ..models.employees import Employee, employee_pool
 
 
 class EmployeesResource(Resource):

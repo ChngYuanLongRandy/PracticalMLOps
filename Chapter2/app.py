@@ -2,7 +2,7 @@ from distutils.log import debug
 
 from flask import Flask
 from flask_restful import Api
-from resources.employees import (
+from .resources.employees import (
     ActivityEmployeeResource,
     EmployeeResource,
     EmployeesResource,
