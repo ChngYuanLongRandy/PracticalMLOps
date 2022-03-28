@@ -6,4 +6,4 @@ test:
 
 lint:
 	isort
-	black
+	python3 -m black
