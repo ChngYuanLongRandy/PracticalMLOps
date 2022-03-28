@@ -1,7 +1,9 @@
 from distutils.log import debug
+
 from flask import Flask
 from flask_restful import Api
-from resources.employees import EmployeeResource, EmployeesResource, ActivityEmployeeResource, HealthResource
+from resources.employees import (ActivityEmployeeResource, EmployeeResource,
+                                 EmployeesResource, HealthResource)
 
 app = Flask(__name__)
 api = Api(app)
