@@ -21,10 +21,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Make build
+        working-directory: ./Chapter2
         run: |
           pwd
           ls
-          cd Chapter2 
           make build
   
   test:
