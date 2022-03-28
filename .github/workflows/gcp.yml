@@ -22,6 +22,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Make build
         run: |
+          print cwd
           cd Chapter2 
           make build
   
