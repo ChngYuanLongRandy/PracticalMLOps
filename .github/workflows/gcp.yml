@@ -22,10 +22,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Make build
         working-directory: ./Chapter2
-        run: |
-          pwd
-          ls
-          make build
+        run: make build
   
   test:
     # The type of runner that the job will run on
@@ -38,6 +35,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Pytest
+        working-directory: ./Chapter2
         run: make test
   lint:
     # The type of runner that the job will run on
@@ -50,4 +48,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Make lint
+        working-directory: ./Chapter2
         run: make lint
