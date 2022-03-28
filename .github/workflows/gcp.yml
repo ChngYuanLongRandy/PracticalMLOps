@@ -23,6 +23,7 @@ jobs:
       - name: Make build
         run: |
           pwd
+          ls
           cd Chapter2 
           make build
   
